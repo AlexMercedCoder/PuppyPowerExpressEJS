@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Puppy Power! Puppy Lovers Unite!</title>
+  </head>
+  <body>
+    <h1>Puppy Power! Puppy Lovers Unite!</h1>
+    <a href="/puppy"><button>Back to Main Page</button></a>
+    <main class="show">
+      <img src="<%= puppy.img %>" />
+      <h2><%= puppy.likes %></h2>
+      <a href="/puppy/like/<%= puppy._id %>"><button>Like</button></a>
+      <a href="/puppy/<%= puppy._id %>/edit"><button>Edit Dog</button></a>
+      <form action="/puppy/<%= puppy._id %>?_method=DELETE" method="post">
+        <input type="submit" value="delete dog" />
+      </form>
+    </main>
+  </body>
+</html>

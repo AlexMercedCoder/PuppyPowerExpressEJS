@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Puppy Power! Puppy Lovers Unite!</title>
+  </head>
+  <body>
+    <h1>Puppy Power! Puppy Lovers Unite!</h1>
+    <a href="/puppy/new"><button>Add a Puppy</button></a>
+    <main>
+      <% for (puppy of puppies) { %>
+
+      <article class="<%= puppy.likes > 5 ? 'gold' : 'brown' %>">
+        <a href="/puppy/<%= puppy._id %>"><img src="<%= puppy.img %>" /></a>
+        <h2><%= puppy.likes %></h2>
+        <a href="/puppy/like/<%= puppy._id %>"><button>Like</button></a>
+      </article>
+
+      <% } %>
+    </main>
+  </body>
+</html>
